@@ -76,6 +76,7 @@ namespace pinocchio
       evalFunction(x);
       res = Base::y;
     }
+    VectorXs res;
     
     using Base::evalJacobian;
     template<typename ConfigVectorType, typename TangentVector1, typename TangentVector2>
@@ -109,7 +110,6 @@ namespace pinocchio
     using Base::jac;
     
     VectorXs x;
-    VectorXs res;
     
     ADConfigVectorType ad_q, ad_q_plus;
     ADTangentVectorType ad_dq, ad_v, ad_a;
